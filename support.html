@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Tickets</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="support-page">
+
+  <div class="support-header">
+    <h1>Support Tickets</h1>
+    <button class="raise-btn">Raise Ticket</button>
+  </div>
+
+  <div class="ticket-card pending-ticket">
+    <h3>Billing Issue</h3>
+    <p>Status: Pending</p>
+    <p>Ticket ID: TK-101</p>
+  </div>
+
+  <div class="ticket-card progress-ticket">
+    <h3>Warehouse Access Problem</h3>
+    <p>Status: In Progress</p>
+    <p>Ticket ID: TK-102</p>
+  </div>
+
+  <div class="ticket-card resolved-ticket">
+    <h3>Maintenance Request</h3>
+    <p>Status: Resolved</p>
+    <p>Ticket ID: TK-103</p>
+  </div>
+
+</div>
+
+<script>
+
+document.querySelector(".raise-btn").onclick = function(){
+
+  alert("Raise Ticket Form Opened");
+
+};
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenant Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+
+  <div class="top-bar">
+
+    <div>
+      <p>Tenant Portal</p>
+      <h1>Welcome back, Admin 👋</h1>
+      <p>Here's your latest warehouse and rent overview.</p>
+    </div>
+
+    <div class="top-buttons">
+      <button class="btn btn-light">Statement</button>
+      <button class="btn btn-main">Pay Rent Now</button>
+    </div>
+
+  </div>
+
+  <!-- ALERT -->
+
+  <div class="alert-box">
+
+    <div>
+      <h3>Rent for May 2026 is due in 3 days</h3>
+      <p>₹48,500 due by 12 May 2026. Complete payment before due date.</p>
+    </div>
+
+    <button class="pay-btn">Pay ₹48,500</button>
+
+  </div>
+
+  <!-- CARDS -->
+
+  <div class="cards">
+
+    <div class="card">
+      <h4>CURRENT RENT</h4>
+      <h2>₹48,500</h2>
+      <p>Due May 12, 2026</p>
+    </div>
+
+    <div class="card">
+      <h4>OUTSTANDING</h4>
+      <h2>₹0</h2>
+      <p class="small-text">All payments cleared</p>
+    </div>
+
+    <div class="card">
+      <h4>LEASE ENDS IN</h4>
+      <h2>187 days</h2>
+      <p>Expires Nov 12, 2026</p>
+    </div>
+
+    <div class="card">
+      <h4>ACTIVE TICKETS</h4>
+      <h2>1 / 12</h2>
+      <p>1 ticket in progress</p>
+    </div>
+
+  </div>
+
+  <!-- ================================= -->
+<!-- OPERATIONS DASHBOARD -->
+<!-- ================================= -->
+
+<div class="operations-dashboard">
+
+  <!-- TOP KPI -->
+
+  <div class="ops-grid">
+
+    <div class="ops-card">
+      <p>Active Warehouses</p>
+      <h2>12</h2>
+      <span class="green-text">
+        Operational
+      </span>
+    </div>
+
+    <div class="ops-card">
+      <p>Pending Shipments</p>
+      <h2>48</h2>
+      <span class="orange-text">
+        Requires dispatch
+      </span>
+    </div>
+
+    <div class="ops-card">
+      <p>Inventory Alerts</p>
+      <h2>09</h2>
+      <span class="red-text">
+        Low stock detected
+      </span>
+    </div>
+
+    <div class="ops-card">
+      <p>Vehicles Active</p>
+      <h2>26</h2>
+      <span class="blue-text">
+        Live tracking enabled
+      </span>
+    </div>
+
+  </div>
+
+
+
+  <!-- STATUS SECTION -->
+
+  <div class="ops-layout">
+
+    <!-- LIVE OPERATIONS -->
+
+    <div class="ops-panel">
+
+      <div class="panel-header">
+        <h2>Live Warehouse Status</h2>
+      </div>
+
+      <div class="status-row">
+
+        <div>
+          <h4>Dock A-12</h4>
+          <p>Loading shipment</p>
+        </div>
+
+        <span class="live-status green-status">
+          Active
+        </span>
+
+      </div>
+
+      <div class="status-row">
+
+        <div>
+          <h4>Dock B-08</h4>
+          <p>Under maintenance</p>
+        </div>
+
+        <span class="live-status orange-status">
+          Maintenance
+        </span>
+
+      </div>
+
+      <div class="status-row">
+
+        <div>
+          <h4>Dock C-14</h4>
+          <p>Awaiting vehicle</p>
+        </div>
+
+        <span class="live-status gray-status">
+          Idle
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- INVENTORY -->
+
+    <div class="ops-panel">
+
+      <div class="panel-header">
+        <h2>Inventory Movement</h2>
+      </div>
+
+      <div class="inventory-box">
+
+        <div class="inventory-item">
+          <h3>1,248</h3>
+          <p>Incoming Stock</p>
+        </div>
+
+        <div class="inventory-item">
+          <h3>932</h3>
+          <p>Outgoing Orders</p>
+        </div>
+
+        <div class="inventory-item">
+          <h3>18</h3>
+          <p>Returned Items</p>
+        </div>
+
+        <div class="inventory-item">
+          <h3>07</h3>
+          <p>Damaged Goods</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- LOWER SECTION -->
+
+  <div class="ops-bottom-grid">
+
+    <!-- VEHICLES -->
+
+    <div class="ops-panel">
+
+      <div class="panel-header">
+        <h2>Vehicle Tracking</h2>
+      </div>
+
+      <div class="vehicle-row">
+
+        <div>
+          <h4>KA-01-TR-4421</h4>
+          <p>Driver: Rajesh</p>
+        </div>
+
+        <span class="vehicle-status moving">
+          Arriving • 14 mins
+        </span>
+
+      </div>
+
+      <div class="vehicle-row">
+
+        <div>
+          <h4>KA-09-WH-7712</h4>
+          <p>Driver: Suresh</p>
+        </div>
+
+        <span class="vehicle-status delivered">
+          Delivered
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- WORKFORCE -->
+
+    <div class="ops-panel">
+
+      <div class="panel-header">
+        <h2>Workforce Attendance</h2>
+      </div>
+
+      <div class="attendance-grid">
+
+        <div class="attendance-card">
+          <h2>82</h2>
+          <p>Present</p>
+        </div>
+
+        <div class="attendance-card">
+          <h2>06</h2>
+          <p>Late</p>
+        </div>
+
+        <div class="attendance-card">
+          <h2>03</h2>
+          <p>Absent</p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ACTIVITY -->
+
+    <div class="ops-panel">
+
+      <div class="panel-header">
+        <h2>Operations Timeline</h2>
+      </div>
+
+      <div class="timeline-row">
+        <span class="timeline-dot"></span>
+        <div>
+          <h4>Shipment dispatched</h4>
+          <p>5 mins ago</p>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <span class="timeline-dot"></span>
+        <div>
+          <h4>Inventory updated</h4>
+          <p>18 mins ago</p>
+        </div>
+      </div>
+
+      <div class="timeline-row">
+        <span class="timeline-dot"></span>
+        <div>
+          <h4>Dock assigned</h4>
+          <p>34 mins ago</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+  <!-- MAIN -->
+
+  <div class="main">
+
+    <!-- WAREHOUSE -->
+
+    <div class="warehouse">
+
+      <div class="section-title">
+        <h2>Your Warehouse</h2>
+        <span class="active">Active Lease</span>
+      </div>
+
+      <div class="warehouse-grid">
+
+        <div class="mini-card">
+          <p>Unit Number</p>
+          <h3>B-204</h3>
+          <p>Block B • 2nd Floor</p>
+        </div>
+
+        <div class="mini-card">
+          <p>Unit Size</p>
+          <h3>2,400 sq.ft</h3>
+          <p>Climate-controlled</p>
+        </div>
+
+        <div class="mini-card">
+          <p>Monthly Rent</p>
+          <h3>₹48,500</h3>
+          <p>+ ₹2,000 maintenance</p>
+        </div>
+
+      </div>
+
+      <div class="progress-top">
+        <h4>Lease Progress</h4>
+        <p>61% completed • 187 days left</p>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+
+    </div>
+
+    <!-- QUICK ACTIONS -->
+
+    <div class="actions">
+
+      <h2>Quick Actions</h2>
+
+      <div class="action-item">
+        <h4>Pay Rent</h4>
+        <p>NEFT / RTGS / IMPS</p>
+      </div>
+
+      <div class="action-item">
+        <h4>View Receipts</h4>
+        <p>Last 12 months</p>
+      </div>
+
+      <div class="action-item support-open">
+        <h4>Support Tickets</h4>
+        <p>Raise maintenance and billing complaints</p>
+      </div>
+
+      <div class="action-item profile-open">
+        <h4>My Profile & Security</h4>
+        <p>Manage personal details and password</p>
+      </div>
+
+      <!-- =============================== -->
+<!-- ADD THIS INSIDE QUICK ACTIONS -->
+<!-- =============================== -->
+
+<div class="action-item operations-open">
+  <h4>Operations Dashboard</h4>
+  <p>Revenue, occupancy & live operations</p>
+</div>
+
+<!-- WAREHOUSE INVENTORY -->
+
+<div class="action-item inventory-open">
+  <h4>Warehouse Inventory</h4>
+  <p>Manage warehouse units & availability</p>
+</div>
+
+<!-- TENANT DIRECTORY -->
+
+<div class="action-item tenant-open">
+  <h4>Tenant Directory</h4>
+  <p>View tenant records & lease details</p>
+</div>
+
+<!-- RENT MANAGEMENT -->
+
+<div class="action-item rent-open">
+  <h4>Rent Management</h4>
+  <p>Track rent collections & pending payments</p>
+</div>
+
+<!-- LEASE MANAGEMENT -->
+
+<div class="action-item lease-open">
+  <h4>Lease Management</h4>
+  <p>Manage active and expiring leases</p>
+</div>
+
+<!-- TICKET MONITORING -->
+
+<div class="action-item ticket-open">
+  <h4>Ticket Monitoring</h4>
+  <p>Monitor support tickets & issue status</p>
+</div>
+    </div>
+
+
+  </div>
+
+  <!-- RECENT -->
+
+  <div class="recent">
+
+    <div class="recent-header">
+      <h2>Recent Activity</h2>
+    </div>
+
+    <div class="activity">
+
+      <div class="activity-left">
+
+        <div class="icon green">✓</div>
+
+        <div>
+          <h4>Payment of ₹48,500 received for April 2026</h4>
+          <p>Apr 8, 2026 • Ref: TXN-23488101 • via IMPS</p>
+        </div>
+
+      </div>
+
+      <div class="receipt">Receipt</div>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+
+  <div class="footer-bar">
+    🔒 WareHub • v2.6 • 18 May 2026 • YRS Infotech
+  </div>
+
+  <script>
+
+    // PAY RENT NOW BUTTON
+
+    document.querySelector(".btn-main").onclick = function(){
+
+      window.location.href = "payment.html";
+
+    };
+
+    // PAY ₹48,500 BUTTON
+
+    document.querySelector(".pay-btn").onclick = function(){
+
+      window.location.href = "payment.html";
+
+    };
+
+    // QUICK ACTIONS
+
+    const actionItems = document.querySelectorAll(".action-item");
+
+    actionItems.forEach(item => {
+
+      item.onclick = function(){
+
+        const title = item.querySelector("h4").innerText;
+
+        if(title === "Pay Rent"){
+
+          window.location.href = "payment.html";
+
+        }
+
+        else{
+
+          alert(title + " opened");
+
+        }
+
+      };
+
+    });
+    
+      const agreementOpen = document.querySelector(".agreement-open");
+
+        if(agreementOpen){
+
+        agreementOpen.onclick = function(){
+
+        window.location.href = "agreement.html";
+
+      };
+
+      };
+
+      const supportOpen = document.querySelector(".support-open");
+
+        if(supportOpen){
+          supportOpen.onclick = function(){
+
+    window.location.href = "support.html";
+
+  };
+
+}
+
+const profileOpen = document.querySelector(".profile-open");
+
+if(profileOpen){
+
+  profileOpen.onclick = function(){
+
+    window.location.href = "profile.html";
+
+  };
+
+};
+/* OPERATIONS DASHBOARD */
+
+const operationsOpen =
+document.querySelector(
+".operations-open"
+);
+
+if(operationsOpen){
+
+  operationsOpen.onclick =
+  function(){
+
+    window.location.href =
+    "operations-dashboard.html";
+
+  };
+
+}
+/* WAREHOUSE INVENTORY */
+
+const inventoryOpen =
+document.querySelector(".inventory-open");
+
+if(inventoryOpen){
+
+  inventoryOpen.onclick = function(){
+
+    window.location.href =
+    "warehouse-inventory.html";
+    
+  };
+
+}
+
+/* TENANT DIRECTORY */
+
+const tenantOpen =
+document.querySelector(".tenant-open");
+
+if(tenantOpen){
+
+  tenantOpen.onclick = function(){
+
+    window.location.href =
+    "tenant-directory.html";
+
+  };
+
+}
+
+/* RENT MANAGEMENT */
+
+const rentOpen =
+document.querySelector(".rent-open");
+
+if(rentOpen){
+
+  rentOpen.onclick = function(){
+
+    window.location.href =
+    "rent-management.html";
+
+  };
+
+}
+
+/* LEASE MANAGEMENT */
+
+const leaseOpen =
+document.querySelector(".lease-open");
+
+if(leaseOpen){
+
+  leaseOpen.onclick = function(){
+
+    window.location.href =
+    "lease-management.html";
+
+  };
+
+}
+
+/* TICKET MONITORING */
+
+const ticketOpen =
+document.querySelector(".ticket-open");
+
+if(ticketOpen){
+
+  ticketOpen.onclick = function(){
+
+    window.location.href =
+    "ticket-monitoring.html";
+
+  };
+
+}
+
+
+    // MODAL CLOSE
+
+    const modal = document.querySelector(".modal");
+
+    const closeBtn = document.querySelector(".close-btn");
+
+    closeBtn.onclick = function(){
+
+      modal.style.display = "none";
+
+    };
+
+  
+
+  </script>
+
+
+
+
+</body>
+</html>

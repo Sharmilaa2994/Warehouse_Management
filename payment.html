@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rent & Payment History</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="payment-history">
+
+    <!-- HEADER -->
+
+    <div class="history-header">
+
+      <div>
+        <p class="section-small">Financial Records</p>
+
+        <h2>Rent & Payment History</h2>
+
+        <p class="history-sub">
+          Complete month-by-month rent history with receipts and payment tracking.
+        </p>
+      </div>
+
+      <!-- RIGHT BUTTONS -->
+
+      <div class="history-buttons">
+
+        <button class="filter-btn">
+          Filter
+        </button>
+
+        <button class="export-btn">
+          Export PDF
+        </button>
+
+        <button class="export-btn excel">
+          Export Excel
+        </button>
+
+        <button class="pay-now-btn">
+          Pay Now
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- SUMMARY -->
+
+    <div class="summary-grid">
+
+      <div class="summary-card paid-card">
+        <h4>PAID YTD</h4>
+        <h2>₹5,82,000</h2>
+        <p>12 successful payments</p>
+      </div>
+
+      <div class="summary-card pending-card">
+        <h4>OUTSTANDING</h4>
+        <h2>₹48,500</h2>
+        <p>Due in 3 days</p>
+      </div>
+
+      <div class="summary-card late-card">
+        <h4>LATE FEES</h4>
+        <h2>₹2,000</h2>
+        <p>Previous billing cycle</p>
+      </div>
+
+      <div class="summary-card avg-card">
+        <h4>AVG PAYMENT TIME</h4>
+        <h2>2.3 Days</h2>
+        <p>Before due date</p>
+      </div>
+
+    </div>
+
+    <!-- TABLE -->
+
+    <div class="table-wrapper">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Method</th>
+            <th>Reference No</th>
+            <th>Date Paid</th>
+            <th>Receipt</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>May 2026</td>
+            <td>₹48,500</td>
+            <td><span class="status pending">Pending</span></td>
+            <td><span class="method imps">IMPS</span></td>
+            <td>TXN-982314</td>
+            <td>—</td>
+            <td><button class="receipt-btn disabled">Pending</button></td>
+          </tr>
+
+          <tr>
+            <td>April 2026</td>
+            <td>₹48,500</td>
+            <td><span class="status paid">Paid</span></td>
+            <td><span class="method neft">NEFT</span></td>
+            <td>TXN-23488101</td>
+            <td>08 Apr 2026</td>
+            <td><button class="receipt-btn">Download PDF</button></td>
+          </tr>
+
+          <tr>
+            <td>March 2026</td>
+            <td>₹48,500</td>
+            <td><span class="status paid">Paid</span></td>
+            <td><span class="method rtgs">RTGS</span></td>
+            <td>TXN-87342110</td>
+            <td>09 Mar 2026</td>
+            <td><button class="receipt-btn">Download PDF</button></td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+  <!-- PAYMENT MODAL -->
+
+  <div class="payment-modal" id="paymentModal">
+
+    <div class="payment-box">
+
+      <div class="payment-header">
+
+        <h2>Select Payment Method</h2>
+
+        <span class="close-btn" id="closeModal">&times;</span>
+
+      </div>
+
+      <p class="payment-subtitle">
+        Choose your preferred payment option
+      </p>
+
+      <div class="payment-options">
+
+        <div class="payment-option">
+          <h3>📱 UPI</h3>
+          <p>Google Pay, PhonePe, Paytm</p>
+        </div>
+
+        <div class="payment-option">
+          <h3>🏦 Net Banking</h3>
+          <p>All major Indian banks supported</p>
+        </div>
+
+        <div class="payment-option">
+          <h3>💵 Cash</h3>
+          <p>Pay directly at office counter</p>
+        </div>
+
+        <div class="payment-option">
+          <h3>💳 Credit Card</h3>
+          <p>Visa, Mastercard, RuPay</p>
+        </div>
+
+        <div class="payment-option">
+          <h3>💳 Debit Card</h3>
+          <p>Instant secure payments</p>
+        </div>
+
+        <div class="payment-option razorpay-option">
+          <h3>⚡ Razorpay Gateway</h3>
+          <p>Secure online payment using Razorpay</p>
+        </div>
+
+        <div class="payment-option bank-option">
+          <h3>🏦 Own Bank Gateway</h3>
+          <p>Direct payment through warehouse banking portal</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    // FILTER BUTTON
+
+    document.querySelector(".filter-btn").onclick = function(){
+
+      alert("Filter options opened");
+
+    };
+
+    // EXPORT PDF
+
+    document.querySelector(".export-btn").onclick = function(){
+
+      alert("PDF export started");
+
+    };
+
+    // EXPORT EXCEL
+
+    document.querySelector(".excel").onclick = function(){
+
+      alert("Excel export started");
+
+    };
+
+    // OPEN PAYMENT OPTIONS
+
+    const modal = document.getElementById("paymentModal");
+
+    document.querySelector(".pay-now-btn").onclick = function(){
+
+      modal.style.display = "flex";
+
+    };
+
+    // CLOSE MODAL
+
+    document.getElementById("closeModal").onclick = function(){
+
+      modal.style.display = "none";
+
+    };
+
+    // OUTSIDE CLICK
+
+    window.onclick = function(e){
+
+      if(e.target === modal){
+
+        modal.style.display = "none";
+
+      }
+
+    };
+
+    // PAYMENT OPTION CLICK
+
+    const paymentOptions = document.querySelectorAll(".payment-option");
+
+    paymentOptions.forEach(option => {
+
+      option.onclick = function(){
+
+        const method = option.querySelector("h3").innerText;
+
+        alert(method + " selected successfully");
+
+      };
+
+    });
+
+    const razorpayBtn = document.querySelector(".razorpay-option");
+
+      if(razorpayBtn){
+
+        razorpayBtn.onclick = function(){
+
+        alert("Redirecting to Razorpay Payment Gateway...");
+
+      };
+
+    };
+
+    const bankBtn = document.querySelector(".bank-option");
+
+      if(bankBtn){
+
+        bankBtn.onclick = function(){
+
+        alert("Opening Own Bank Gateway...");
+
+      };
+
+    };
+  </script>
+
+</body>
+</html>

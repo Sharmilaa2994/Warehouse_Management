@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Lease Agreement</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="agreement-page">
+
+  <div class="agreement-header">
+
+    <h1>Lease Agreement</h1>
+
+    <button class="download-btn">
+
+      Download PDF
+
+    </button>
+
+  </div>
+
+  <div class="agreement-box">
+
+    <h2>
+      Warehouse Lease Agreement
+    </h2>
+
+    <br>
+
+    <p>
+      <strong>Tenant:</strong>
+      Admin
+    </p>
+
+    <p>
+      <strong>Warehouse Unit:</strong>
+      B-204
+    </p>
+
+    <p>
+      <strong>Lease Start:</strong>
+      Nov 12 2025
+    </p>
+
+    <p>
+      <strong>Lease End:</strong>
+      Nov 12 2026
+    </p>
+
+    <p>
+      <strong>Monthly Rent:</strong>
+      ₹48,500
+    </p>
+
+    <br>
+
+    <hr>
+
+    <br>
+
+    <p>
+
+      This agreement confirms the
+      warehouse lease between the
+      tenant and warehouse
+      management.
+
+      Tenant agrees to follow all
+      warehouse rules,
+      maintenance policies,
+      payment regulations and
+      warehouse security terms.
+
+    </p>
+
+  </div>
+
+</div>
+
+
+
+<script>
+
+document.querySelector(".download-btn")
+.onclick = function(){
+
+  const content = `
+
+WAREHOUSE LEASE AGREEMENT
+
+Tenant: Admin
+
+Warehouse Unit: B-204
+
+Lease Start: Nov 12 2025
+
+Lease End: Nov 12 2026
+
+Monthly Rent: ₹48,500
+
+Agreement approved by
+YRS Infotech.
+
+`;
+
+  const blob = new Blob(
+    [content],
+    {type:"application/pdf"}
+  );
+
+  const link =
+  document.createElement("a");
+
+  link.href =
+  URL.createObjectURL(blob);
+
+  link.download =
+  "LeaseAgreement.pdf";
+
+  link.click();
+
+};
+
+</script>
+
+</body>
+</html>

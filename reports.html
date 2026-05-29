@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warehouse Rent Management System</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial;
+        }
+
+        body{
+            background:#f1f5f9;
+        }
+
+        /* SIDEBAR */
+
+        .sidebar{
+            width:250px;
+            height:100vh;
+            background:linear-gradient(to bottom,#0f172a,#1e293b);
+            position:fixed;
+            padding-top:20px;
+        }
+
+        .sidebar h2{
+            color:white;
+            text-align:center;
+            margin-bottom:40px;
+            font-size:28px;
+        }
+
+        .sidebar a{
+            display:block;
+            color:#e2e8f0;
+            padding:15px 25px;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        .sidebar a:hover{
+            background:#2563eb;
+            color:white;
+        }
+
+        /* MAIN */
+
+        .main{
+            margin-left:260px;
+            padding:25px;
+        }
+
+        .section{
+            margin-bottom:50px;
+        }
+
+        h1{
+            margin-bottom:20px;
+            color:#0f172a;
+        }
+
+        /* DASHBOARD */
+
+        .dashboard{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:20px;
+        }
+
+        .card{
+            padding:25px;
+            border-radius:15px;
+            color:white;
+            box-shadow:0px 4px 15px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+        }
+
+        .card:nth-child(1){
+            background:linear-gradient(to right,#2563eb,#3b82f6);
+        }
+
+        .card:nth-child(2){
+            background:linear-gradient(to right,#059669,#10b981);
+        }
+
+        .card:nth-child(3){
+            background:linear-gradient(to right,#d97706,#f59e0b);
+        }
+
+        .card:nth-child(4){
+            background:linear-gradient(to right,#dc2626,#ef4444);
+        }
+
+        .card h2{
+            margin-bottom:10px;
+        }
+
+        .card p{
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        /* FORM */
+
+        .form-box{
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            width:450px;
+            box-shadow:0px 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-box label{
+            font-weight:bold;
+            color:#334155;
+        }
+
+        .form-box input{
+            width:100%;
+            padding:12px;
+            margin-top:10px;
+            margin-bottom:20px;
+            border:1px solid #cbd5e1;
+            border-radius:8px;
+        }
+
+        .form-box button{
+            background:#2563eb;
+            color:white;
+            border:none;
+            padding:12px 20px;
+            border-radius:8px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .form-box button:hover{
+            background:#1d4ed8;
+        }
+
+        /* TABLE */
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0px 4px 15px rgba(0,0,0,0.1);
+        }
+
+        table th{
+            background:#2563eb;
+            color:white;
+            padding:15px;
+            text-align:left;
+        }
+
+        table td{
+            padding:15px;
+            border-bottom:1px solid #e2e8f0;
+        }
+
+        table tr:hover{
+            background:#f8fafc;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <h2>Warehouse</h2>
+
+    <a href="#dashboard">Dashboard</a>
+    <a href="#reports">Reports & Analytics</a>
+    <a href="#config">System Configuration</a>
+    <a href="#tickets">Ticket Queue</a>
+    <a href="#customers">Customer Records</a>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="main">
+
+    <!-- DASHBOARD -->
+
+    <div class="section" id="dashboard">
+
+        <h1>Warehouse Dashboard</h1>
+
+        <div class="dashboard">
+
+            <div class="card">
+                <h2>Total Warehouses</h2>
+                <p>120</p>
+            </div>
+
+            <div class="card">
+                <h2>Occupied</h2>
+                <p>95</p>
+            </div>
+
+            <div class="card">
+                <h2>Vacant</h2>
+                <p>25</p>
+            </div>
+
+            <div class="card">
+                <h2>Revenue</h2>
+                <p>₹5,40,000</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- REPORTS -->
+
+    <div class="section" id="reports">
+
+        <h1>Reports & Analytics</h1>
+
+        <div class="dashboard">
+
+            <div class="card">
+                <h2>Monthly Revenue</h2>
+                <p>₹2,50,000</p>
+            </div>
+
+            <div class="card">
+                <h2>Pending Payments</h2>
+                <p>15</p>
+            </div>
+
+            <div class="card">
+                <h2>Lease Renewals</h2>
+                <p>8</p>
+            </div>
+
+            <div class="card">
+                <h2>Open Tickets</h2>
+                <p>10</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SYSTEM CONFIGURATION -->
+
+    <div class="section" id="config">
+
+        <h1>System Configuration</h1>
+
+        <form class="form-box">
+
+            <label>Rent Due Day</label>
+            <input type="number" placeholder="Enter Due Day">
+
+            <label>Late Fee Percentage</label>
+            <input type="number" placeholder="Enter Percentage">
+
+            <label>SLA Hours</label>
+            <input type="number" placeholder="Enter SLA Hours">
+
+            <button type="submit">Save Configuration</button>
+
+        </form>
+
+    </div>
+
+    <!-- TICKET QUEUE -->
+
+    <div class="section" id="tickets">
+
+        <h1>Ticket Queue Workspace</h1>
+
+        <table>
+
+            <tr>
+                <th>ID</th>
+                <th>Tenant</th>
+                <th>Category</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Ravi</td>
+                <td>Maintenance</td>
+                <td>Open</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Arjun</td>
+                <td>Billing</td>
+                <td>Resolved</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Kumar</td>
+                <td>Access Issue</td>
+                <td>In Progress</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- CUSTOMER RECORDS -->
+
+    <div class="section" id="customers">
+
+        <h1>Customer Records (Read-only)</h1>
+
+        <table>
+
+            <tr>
+                <th>Name</th>
+                <th>Mobile</th>
+                <th>Warehouse</th>
+                <th>Lease End</th>
+            </tr>
+
+            <tr>
+                <td>Aadee</td>
+                <td>9876543210</td>
+                <td>WH-101</td>
+                <td>12-12-2026</td>
+            </tr>
+
+            <tr>
+                <td>Kumar</td>
+                <td>9876543211</td>
+                <td>WH-102</td>
+                <td>15-01-2027</td>
+            </tr>
+
+            <tr>
+                <td>Arjun</td>
+                <td>9876543212</td>
+                <td>WH-103</td>
+                <td>22-03-2027</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div class="dashboard">
+
+    <div class="card">
+        <h2>Monthly Revenue</h2>
+        <p>₹2,50,000</p>
+    </div>
+
+    <div class="card">
+        <h2>Pending Payments</h2>
+        <p>15</p>
+    </div>
+
+    <div class="card">
+        <h2>Lease Renewals</h2>
+        <p>8</p>
+    </div>
+
+</div>
+
+</div>
+
+<script>
+
+    console.log("Warehouse Project Loaded");
+
+</script>
+
+</body>
+</html>
